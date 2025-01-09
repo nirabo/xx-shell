@@ -11,3 +11,17 @@
    pip install mcp-python-sdk
    ```
 2. Build a server or client using the [Python SDK Guide](docs/mcp_python_sdk.md).
+
+## Development Tools
+
+### AI Pair Programming
+Use [Aider](https://aider.chat/) for AI-assisted development:
+```bash
+aider --model sonnet --anthropic-api-key YOUR_KEY
+```
+
+Aider supports:
+- Automatic git commits
+- Multi-file editing
+- Integration with popular IDEs
+- Voice-to-code capabilities

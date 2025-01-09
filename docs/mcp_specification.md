@@ -31,6 +31,13 @@ MCP is an open protocol that standardizes how applications provide context to LL
 - Communication mechanism between clients and servers.
 - Supports HTTP, WebSocket, and other protocols.
 
+### AI-Assisted Development
+MCP servers and clients can be developed using AI pair programming tools like Aider. This enables:
+- Rapid prototyping of MCP resources
+- AI-assisted debugging and testing
+- Automated documentation updates
+- Efficient refactoring of MCP implementations
+
 ## Specification Details
 - [Full Specification](https://spec.modelcontextprotocol.io)
 - [GitHub Repository](https://github.com/modelcontextprotocol)

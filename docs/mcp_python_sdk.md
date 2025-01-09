@@ -37,6 +37,25 @@ response = client.get_resource("my_resource")
 print(response)
 ```
 
+## AI Pair Programming with Aider
+
+The MCP Python SDK integrates well with Aider, an AI pair programming tool. Key features:
+
+- Edit code in your local git repository
+- Works with multiple LLMs (Claude, GPT-4, etc.)
+- Automatic git commits with sensible messages
+- Supports multiple files and complex changes
+- Works with most popular programming languages
+
+### Quickstart
+```bash
+pip install aider-install
+aider-install
+aider --model sonnet --anthropic-api-key YOUR_KEY
+```
+
+See [Aider Documentation](https://aider.chat/) for more details.
+
 ## Documentation
 - [GitHub Repository](https://github.com/modelcontextprotocol/python-sdk)
 - [API Reference](#) (Link to detailed API docs)
