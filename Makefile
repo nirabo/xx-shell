@@ -21,6 +21,7 @@ install: venv
 	$(UV) pip install -r requirements.txt
 	$(UV) pip install -r requirements-dev.txt
 	$(PYTHON) -m pip install -e .
+	$(PYTHON) -m pip install -e .
 
 # Testing
 test: venv
