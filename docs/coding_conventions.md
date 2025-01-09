@@ -1,79 +1,86 @@
-# Python Project Best Practices and Coding Conventions
+# XX Shell Mode Coding Conventions
 
 ## Project Structure
-- Use PyScaffold for project initialization and structure
-- Follow the src-layout pattern
-- Maintain clear separation between source code, tests, and documentation
-- Keep configuration in dedicated config files
+- Use src-layout pattern with `src/xx_shell` as main package
+- Separate modules for:
+  - `core/`: Core interpreter and execution logic
+  - `commands/`: Command implementations
+  - `plugins/`: Plugin system components
+  - `session/`: Session management
+  - `ui/`: User interface components
+- Maintain dedicated directories for:
+  - `tests/`: Unit and integration tests
+  - `docs/`: Project documentation
+  - `scripts/`: Development and build scripts
 
 ## Development Environment
-### UV (astral-sh/uv)
-- Use `uv` as a faster alternative to pip
-- Create virtual environments with: `uv venv`
-- Install packages: `uv pip install <package>`
+### UV Integration
+- Use `uv` for package management
+- Create virtual environment: `uv venv .venv`
+- Install dependencies: `uv pip install -r requirements.txt`
 - Generate requirements: `uv pip freeze > requirements.txt`
 
 ## Testing
 ### pytest Framework
-- Write tests in `tests/` directory
-- Use fixtures for test setup
-- Aim for high test coverage (>80%)
-- Include unit, integration, and end-to-end tests
-- Use parametrized tests when testing similar scenarios
+- Write tests in `tests/` directory with mirror structure
+- Use fixtures for command execution setup
+- Include tests for:
+  - Command parsing and validation
+  - Session state management
+  - Plugin system integration
+  - Cross-platform compatibility
 
 ## Documentation
 ### Tools
 - Use Sphinx for API documentation
-- MkDocs for project documentation
+- MkDocs for user documentation
 - Write docstrings in Google style
-- Keep README.md up to date
-- Document all public APIs
+- Include examples in docstrings
+- Document all public APIs and commands
 
 ## Code Quality
-- Use pre-commit hooks
-- Follow PEP 8 style guide
-- Use type hints (PEP 484)
-- Implement proper logging
-- Use pylint/flake8 for linting
+- Use pre-commit hooks for:
+  - Black formatting
+  - isort imports
+  - flake8 linting
+  - mypy type checking
+- Follow PEP 8 with exceptions:
+  - Allow line length up to 100 characters
+  - Use descriptive variable names
+  - Prefer explicit over implicit
 
-## GitHub Workflow
-### Continuous Integration
-- Run tests on every pull request
-- Enforce code quality checks
-- Automate documentation builds
-- Use semantic versioning
-- Implement branch protection rules
+## Session Management
+### Code Organization
+- Store session state in `~/.xx/sessions/`
+- Use JSON format for session files
+- Implement session classes in `session/` module
+- Include versioning in session format
 
-### GitHub Actions
-- Test on multiple Python versions
-- Run security scans
-- Deploy documentation
-- Automate PyPI releases
+### Error Handling
+- Use custom exceptions for session errors
+- Implement proper cleanup on errors
+- Include detailed error messages
+- Maintain backward compatibility
 
-## PyPI Distribution
-- Use `pyproject.toml` for build configuration
-- Include proper package metadata
-- Sign releases with GPG
-- Use GitHub Actions for automated releases
-- Include proper license and documentation
+## Command Implementation
+### Style Guide
+- Use snake_case for command names
+- Implement commands as classes
+- Include help text as class docstring
+- Use type hints for command parameters
+- Implement input validation
 
-## Security
-- Keep dependencies updated
-- Run security scans regularly
-- Use environment variables for secrets
-- Implement proper input validation
-- Follow security best practices
+## Plugin System
+### Development Guidelines
+- Use plugin base class from `plugins/base.py`
+- Implement required interface methods
+- Include plugin metadata
+- Document plugin configuration
+- Handle errors gracefully
 
 ## Version Control
-- Use meaningful commit messages
-- Follow conventional commits specification
-- Create detailed pull request descriptions
+- Use conventional commits
+- Include issue references in commit messages
+- Create feature branches
 - Review code before merging
-- Tag releases properly
-
-## Project Management
-- Use GitHub Issues for task tracking
-- Implement project boards
-- Set up templates for issues and PRs
-- Document release process
-- Maintain a changelog
+- Tag releases with semantic versioning
