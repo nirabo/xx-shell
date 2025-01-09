@@ -40,8 +40,12 @@ format: venv
 
 # Documentation
 docs: venv
-	$(PYTHON) -m sphinx -b html docs/source docs/build
-	$(PYTHON) -m mkdocs build
+	. $(VENV)/bin/activate && $(UV) pip install -r requirements-docs.txt
+	. $(VENV)/bin/activate && $(PYTHON) -m mkdocs serve
+
+docs-build: venv
+	. $(VENV)/bin/activate && $(UV) pip install -r requirements-docs.txt
+	. $(VENV)/bin/activate && $(PYTHON) -m mkdocs build
 
 # Cleanup
 clean:
