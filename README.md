@@ -5,6 +5,7 @@
 - [Specification Summary](docs/mcp_specification.md)
 - [Project Management with UV](docs/uv_project_management.md)
 - [Aider AI Pair Programming](docs/aider_guide.md)
+- [Execution Plan](docs/ExecutionPlan.md)
 
 ## Quickstart
 1. Install the Python SDK:
