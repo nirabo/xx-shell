@@ -110,7 +110,7 @@ Thumbs.db
 *.keystore
 *.truststore
 
-# MCP Specific
+# xx-shell Specific
 .mcp/
 .mcp_cache/
 .mcp_logs/
