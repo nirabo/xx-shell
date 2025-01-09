@@ -36,6 +36,25 @@ aider --model gpt-4
 - `/commit`: Commit changes with AI-generated message
 - `/diff`: Show pending changes
 - `/help`: Show available commands
+- `/multi` or `/m`: Enter multiline input mode (type END to finish)
+
+## Multiline Mode
+Use multiline mode for:
+- Writing longer code blocks
+- Providing detailed instructions
+- Creating complex data structures
+- Writing documentation or comments
+
+Example:
+```bash
+/multi
+def my_function():
+    print("This is a multiline input")
+    return 42
+END
+```
+
+To cancel multiline input, press Ctrl+C
 
 ## Best Practices
 1. Start with small, focused tasks
