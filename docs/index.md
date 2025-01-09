@@ -1,6 +1,6 @@
 # Welcome to XX Shell Documentation
 
-![XX Shell Logo](assets/logo.png){ width="200" }
+![XX Shell Logo](assets/logo_flux.1-dev.png){ width="200" }
 
 XX Shell is a powerful command-line interface with advanced features for...
 
@@ -11,7 +11,7 @@ XX Shell is a powerful command-line interface with advanced features for...
 
 ## Features
 
-- **Command System**: 
+- **Command System**:
 - **Plugin Architecture**:
 - **Session Management**:
 

@@ -1,6 +1,6 @@
 site_name: XX Shell Documentation
-site_url: https://your-org.github.io/xx-aider/
-repo_url: https://github.com/your-org/xx-aider
+site_url: https://nirabo.github.io/xx-shell/
+repo_url: https://github.com/nirabo/xx-shell
 
 theme:
   name: material

@@ -19,8 +19,8 @@ uv pip install xx-shell
 ### From Source
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-org/xx-aider.git
-   cd xx-aider
+   git clone https://github.com/your-org/xx-shell.git
+   cd xx-shell
    ```
 
 2. Install dependencies:

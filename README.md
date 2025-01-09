@@ -4,22 +4,22 @@ XX Shell is a next-generation command-line interface that combines the power of 
 
 ## Key Features
 
-✨ **AI-Powered Assistance**  
+✨ **AI-Powered Assistance**
 - Context-aware command suggestions
 - Natural language processing for commands
 - Intelligent error correction and guidance
 
-⚡ **Extensible Architecture**  
+⚡ **Extensible Architecture**
 - Plugin system for custom functionality
 - Integrated package management
 - Cross-platform compatibility
 
-🔗 **MCP Integration**  
+🔗 **MCP Integration**
 - Native support for Model Context Protocol
 - Seamless LLM integration
 - Standardized access to data sources and tools
 
-📦 **Modern Development**  
+📦 **Modern Development**
 - Built with Python and FastAPI
 - Comprehensive testing framework
 - Automated documentation with MkDocs Material
@@ -44,7 +44,7 @@ XX Shell is a next-generation command-line interface that combines the power of 
 
 ## Documentation
 
-📚 [Read the Documentation](https://your-org.github.io/xx-aider/)  
+📚 [Read the Documentation](https://your-org.github.io/xx-shell/)
 Learn about installation, configuration, and advanced features.
 
 ## Contributing
