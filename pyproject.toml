@@ -1,0 +1,17 @@
+[project]
+name = "xx-shell"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Lyuboslav Petrov", email = "petrov.lyuboslav@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+xx-shell = "xx_shell:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

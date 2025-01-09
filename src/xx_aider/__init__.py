@@ -3,4 +3,4 @@
 
 def main() -> None:
     """Print a greeting message."""
-    print("Hello from xx-aider!")
+    print("Hello from xx-shell!")
