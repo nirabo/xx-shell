@@ -28,7 +28,7 @@ jobs:
       - name: Build and deploy
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          config_file: mkdocs.yml
-          deploy_branch: gh-pages
-          extra_plugins: git-revision-date-localized
+          entryPoint: mkdocs
+          args: gh-deploy --config-file mkdocs.yml --remote-branch gh-pages --extra-plugins git-revision-date-localized
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
