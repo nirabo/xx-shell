@@ -1,4 +1,4 @@
-mcp-python-sdk>=1.0.0
+-e ./mcp-python-sdk  # Local development version
 xx-shell-mode>=0.5.0
 uv>=0.1.0
 requests>=2.31.0
