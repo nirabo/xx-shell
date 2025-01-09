@@ -48,4 +48,4 @@ MCP servers and clients can be developed using AI pair programming tools like Ai
 ## Specification Details
 - [Full Specification](https://spec.modelcontextprotocol.io)
 - [GitHub Repository](https://github.com/modelcontextprotocol)
-- [XX Shell Integration Guide](docs/xx_mcp_integration.md)
+- [XX Shell Integration Guide](xx_mcp_integration.md)
