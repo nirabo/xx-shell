@@ -33,6 +33,18 @@ uv pip install xx-shell
    uv pip install -e .
    ```
 
+## Quickstart Example
+```bash
+# Install XX
+pip install xx-shell
+
+# Activate XX shell
+xx activate
+
+# Use natural language commands
+xx> $ find "all media files under 500mb"
+```
+
 ## Verifying Installation
 Run the following command to verify the installation:
 ```bash

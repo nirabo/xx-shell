@@ -49,3 +49,19 @@ Run tests with coverage:
 ```bash
 pytest --cov
 ```
+
+## Development Roadmap
+### Phase 1: Core Functionality (2 weeks)
+- Basic command interpreter
+- Execution layer
+- Data storage
+
+### Phase 2: Advanced Features (3 weeks)
+- Command optimization
+- Context management
+- User interface
+
+### Phase 3: Ecosystem Integration (2 weeks)
+- Plugin system
+- Cross-platform support
+- Documentation

@@ -28,6 +28,22 @@
    git commit -m "docs: update contributing guide"
    ```
 
+## Quality Assurance
+1. **Testing Strategy**
+   - Unit tests for core components
+   - Integration tests for command execution
+   - End-to-end tests for user workflows
+
+2. **Code Quality**
+   - Implement linting
+   - Enforce code style
+   - Maintain test coverage
+
+3. **Documentation**
+   - Keep documentation updated
+   - Generate API documentation
+   - Maintain changelog
+
 ## Pull Requests
 1. Push your branch:
    ```bash
