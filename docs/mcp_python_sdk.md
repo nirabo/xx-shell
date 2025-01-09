@@ -55,4 +55,4 @@ print(response)
 ## Documentation
 - [GitHub Repository](https://github.com/modelcontextprotocol/python-sdk)
 - [API Reference](#) (Link to detailed API docs)
-- [XX Shell Integration Guide](docs/xx_mcp_integration.md)
+- [XX Shell Integration Guide](xx_mcp_integration.md)
