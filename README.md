@@ -44,7 +44,7 @@ XX Shell is a next-generation command-line interface that combines the power of 
 
 ## Documentation
 
-📚 [Read the Documentation](https://your-org.github.io/xx-shell/)
+📚 [Read the Documentation](https://nirabo.github.io/xx-shell/)
 Learn about installation, configuration, and advanced features.
 
 ## Contributing
