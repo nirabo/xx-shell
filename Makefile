@@ -20,7 +20,7 @@ venv: $(VENV)/bin/activate
 install: venv
 	. $(VENV)/bin/activate && $(UV) pip install -r requirements.txt
 	. $(VENV)/bin/activate && $(UV) pip install -r requirements-dev.txt
-	. $(VENV)/bin/activate && $(UV) -m pip install -e .
+	. $(VENV)/bin/activate && $(UV) pip install -e .
 
 # Testing
 test: venv
