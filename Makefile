@@ -24,6 +24,7 @@ install: venv
 
 # Testing
 test: venv
+	$(UV) pip install -r requirements-dev.txt
 	$(PYTHON) -m pytest tests/ --cov=$(PROJECT_NAME) --cov-report=xml
 
 # Linting and Formatting
