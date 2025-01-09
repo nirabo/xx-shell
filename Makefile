@@ -1,5 +1,5 @@
 # Project Configuration
-PROJECT_NAME := xx_shell
+PROJECT_NAME := xx-shell
 PYTHON := python3
 UV := uv
 VENV := .venv
