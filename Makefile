@@ -28,9 +28,9 @@ test: venv
 
 # Linting and Formatting
 lint: venv
-	$(PYTHON) -m flake8 src/ tests/
-	$(PYTHON) -m mypy src/ tests/
-	$(PYTHON) -m isort --check-only src/ tests/
+	. $(VENV)/bin/activate && $(PYTHON) -m flake8 src/ tests/
+	. $(VENV)/bin/activate && $(PYTHON) -m mypy src/ tests/
+	. $(VENV)/bin/activate && $(PYTHON) -m isort --check-only src/ tests/
 
 format: venv
 	$(PYTHON) -m black src/ tests/
