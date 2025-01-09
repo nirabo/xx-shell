@@ -19,7 +19,7 @@ pip install mcp-python-sdk
 ### Building a Server
 ```python
 from mcp import Server, Resource
-from xx-shell.plugins import MCPPlugin
+from xx_shell.plugins import MCPPlugin
 
 class MyServer(Server, MCPPlugin):
     @Resource
@@ -33,7 +33,7 @@ server.run()
 ### Building a Client
 ```python
 from mcp import Client
-from xx-shell.commands import MCPCommand
+from xx_shell.commands import MCPCommand
 
 client = Client("http://localhost:8000")
 response = client.get_resource("my_resource")
