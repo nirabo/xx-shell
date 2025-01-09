@@ -78,9 +78,9 @@ xx session list
 ```
 
 ## Documentation
-- [MCP Python SDK Guide](docs/mcp_python_sdk.md)
-- [MCP Specification](docs/mcp_specification.md)
-- [XX Shell Documentation](docs/xx_shell.md)
+- [MCP Python SDK Guide](mcp_python_sdk.md)
+- [MCP Specification](mcp_specification.md)
+- [XX Shell Documentation](index.md)
 # XX Shell Mode MCP Integration Guide
 
 ## Overview
