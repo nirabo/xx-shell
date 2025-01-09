@@ -12,16 +12,15 @@ all: install
 
 # Virtual Environment
 $(VENV)/bin/activate:
-	$(UV) venv $(VENV)
+	$(UV) venv $(VENV) --with pip
 
 venv: $(VENV)/bin/activate
 
 # Installation
 install: venv
-	$(UV) pip install -r requirements.txt
-	$(UV) pip install -r requirements-dev.txt
-	$(PYTHON) -m pip install -e .
-	$(PYTHON) -m pip install -e .
+	. $(VENV)/bin/activate && $(UV) pip install -r requirements.txt
+	. $(VENV)/bin/activate && $(UV) pip install -r requirements-dev.txt
+	. $(VENV)/bin/activate && $(PYTHON) -m pip install -e .
 
 # Testing
 test: venv
