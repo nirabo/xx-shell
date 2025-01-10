@@ -1,10 +1,15 @@
 """Core shell implementation."""
 
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from xx_shell.plugins import Plugin
+
 
 class Shell:
     """Main shell class that handles command execution and state management."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Initialize a new shell instance."""
         self.session = None
         self.available_commands = {}
@@ -32,7 +37,7 @@ class Shell:
         """
         return command in self.available_commands
 
-    def load_plugin(self, plugin) -> None:
+    def load_plugin(self, plugin: "Plugin") -> None:
         """Load a plugin into the shell.
 
         Args:
