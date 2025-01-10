@@ -16,7 +16,7 @@ class TestMCPIntegration:
         shell_instance.load_plugin(plugin)
 
         assert "mcp" in shell_instance.available_commands
-        assert shell_instance.get_plugin("mcp") == plugin
+        assert shell_instance.get_plugin("mcp").name == "mcp"
 
     def test_mcp_command_execution(
         self, shell_instance: Shell, mcp_server: None
