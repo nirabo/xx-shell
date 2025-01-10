@@ -1,6 +1,6 @@
 """Base plugin implementation."""
 
-from typing import Dict, Callable, Any
+from typing import Any, Callable, Dict
 
 
 class Plugin:

@@ -1,6 +1,6 @@
 """Core shell implementation."""
 
-from typing import TYPE_CHECKING, Callable, Any
+from typing import TYPE_CHECKING, Any, Callable
 
 if TYPE_CHECKING:
     from xx_shell.plugins import Plugin
