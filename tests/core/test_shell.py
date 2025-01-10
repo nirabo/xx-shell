@@ -41,12 +41,15 @@ class TestShellCore:
         output = shell_instance.execute_command("echo hello")
         assert "hello" in output
         assert len(shell_instance.session.command_history) == 1
-        assert shell_instance.session.command_history[0]["command"] == "echo hello"
+        history = shell_instance.session.command_history[0]
+        assert history["command"] == "echo hello"
         assert "hello" in shell_instance.session.command_history[0]["output"]
 
     def test_command_execution_error(self, shell_instance: Shell) -> None:
         """Test command execution with error."""
         output = shell_instance.execute_command("invalid_command")
-        assert "not found" in output.lower() or "not recognized" in output.lower()
+        output_lower = output.lower()
+        assert "not found" in output_lower or "not recognized" in output_lower
         assert len(shell_instance.session.command_history) == 1
-        assert shell_instance.session.command_history[0]["command"] == "invalid_command"
+        history = shell_instance.session.command_history[0]
+        assert history["command"] == "invalid_command"
