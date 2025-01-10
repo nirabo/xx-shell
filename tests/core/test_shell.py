@@ -1,7 +1,6 @@
 """Unit tests for core shell functionality."""
 
 import pytest
-from xx_shell.core import Shell
 
 
 @pytest.mark.unit
