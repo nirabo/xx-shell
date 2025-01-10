@@ -33,7 +33,11 @@ class TestSessionManager:
         assert loaded is not None
         if loaded:  # Type guard
             assert loaded.session_id == session.session_id
-            assert loaded.command_history == ["ls -la"]
+            # Fix the assertion to check the command history structure
+            assert len(loaded.command_history) == 1
+            assert loaded.command_history[0]["command"] == "ls -la"
+            assert loaded.command_history[0]["output"] == "dummy output"
+            assert "timestamp" in loaded.command_history[0]
 
     def test_session_listing(self, session_manager: SessionManager) -> None:
         """Test listing available sessions."""
