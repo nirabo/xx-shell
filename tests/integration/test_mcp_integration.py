@@ -2,7 +2,7 @@
 
 import pytest
 from xx_shell.core import Shell
-from xx_shell.plugins import MCPPlugin  # type: ignore[import]
+from xx_shell.plugins import MCPPlugin
 
 
 @pytest.mark.integration
@@ -18,7 +18,7 @@ class TestMCPIntegration:
         assert shell_instance.get_plugin("mcp") == plugin
 
     def test_mcp_command_execution(
-        self, shell_instance: Shell, mcp_server
+        self, shell_instance: Shell, mcp_server: None
     ) -> None:
         """Test basic MCP command execution."""
         # TODO: Implement with mock MCP server

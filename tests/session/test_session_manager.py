@@ -15,7 +15,7 @@ class TestSessionManager:
         assert session_manager.get_session(session.id) == session
 
     def test_session_persistence(
-        self, session_manager: SessionManager, tmp_path
+        self, session_manager: SessionManager, tmp_path: str
     ) -> None:
         """Test session save/load functionality."""
         # Create and save session
