@@ -1,7 +1,37 @@
 """XX Shell main entry point."""
 
+import argparse
+from typing import Sequence, Optional
 
-def main() -> None:
-    """Execute the xx-shell command line interface."""
+from xx_shell import __version__
+
+
+def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
+    """Parse command line arguments.
+
+    Args:
+        argv: Optional sequence of arguments to parse
+
+    Returns:
+        Parsed arguments namespace
+    """
+    parser = argparse.ArgumentParser(
+        description="XX Shell - The Intelligent Command Shell"
+    )
+    parser.add_argument(
+        "-v", "--version",
+        action="version",
+        version=f"xx-shell {__version__}"
+    )
+    return parser.parse_args(argv)
+
+
+def main(argv: Optional[Sequence[str]] = None) -> None:
+    """Execute the xx-shell command line interface.
+
+    Args:
+        argv: Optional sequence of arguments to pass
+    """
+    args = parse_args(argv)
     print("XX Shell - Welcome!")
     # TODO: Add actual shell implementation
