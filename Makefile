@@ -34,7 +34,7 @@ all: help
 
 # Virtual Environment
 $(VENV)/bin/activate:
-	$(UV) venv $(VENV) --with pip
+	$(UV) venv $(VENV)
 
 venv: $(VENV)/bin/activate
 
