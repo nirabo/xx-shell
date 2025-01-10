@@ -28,6 +28,7 @@ jobs:
       run: |
         uv venv .venv
         . .venv/bin/activate
+        uf pip install -e .
         uv pip install -r requirements.txt
         uv pip install -r requirements-dev.txt
         uv pip install -r requirements-docs.txt
