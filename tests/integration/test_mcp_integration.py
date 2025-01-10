@@ -1,7 +1,7 @@
 """Integration tests for MCP functionality."""
 
 import pytest
-from xx_shell.plugins import MCPPlugin
+from xx_shell.plugins import MCPPlugin  # type: ignore[import]
 
 
 @pytest.mark.integration

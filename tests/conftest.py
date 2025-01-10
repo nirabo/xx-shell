@@ -1,8 +1,8 @@
 """Test configuration and fixtures for XX Shell tests."""
 
 import pytest
-from xx_shell.core import Shell
-from xx_shell.session import SessionManager
+from xx_shell.core import Shell  # type: ignore[import]
+from xx_shell.session import SessionManager  # type: ignore[import]
 
 
 @pytest.fixture
