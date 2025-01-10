@@ -33,5 +33,5 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
         argv: Optional sequence of arguments to pass
     """
     args = parse_args(argv)
-    print("XX Shell - Welcome!")
-    # TODO: Add actual shell implementation
+    print(f"XX Shell {__version__} - Welcome!")
+    # TODO: Add actual shell implementation using args
