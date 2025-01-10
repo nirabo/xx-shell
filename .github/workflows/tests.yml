@@ -1,0 +1,48 @@
+name: Test Suite
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install UV
+      run: pip install uv
+
+    - name: Install dependencies
+      run: |
+        uv venv .venv
+        . .venv/bin/activate
+        uv pip install -r requirements.txt
+        uv pip install -r requirements-dev.txt
+        uv pip install -r requirements-docs.txt
+
+    - name: Run tests
+      run: |
+        . .venv/bin/activate
+        make test
+
+    - name: Run linting
+      run: |
+        . .venv/bin/activate
+        make lint
+
+    - name: Upload coverage
+      uses: codecov/codecov-action@v3
+      with:
+        fail_ci_if_error: false
