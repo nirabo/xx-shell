@@ -34,4 +34,19 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
     """
     args = parse_args(argv)
     print(f"XX Shell {__version__} - Welcome!")
-    # TODO: Add actual shell implementation using args
+    
+    if argv is None:  # Only start interactive shell if no args provided
+        from xx_shell.core import Shell
+        shell = Shell()
+        shell.show_help()
+        print("Type 'exit' to quit")
+        
+        while True:
+            try:
+                command = input("xx> ")
+                if command == "exit":
+                    break
+                # TODO: Process command through shell
+            except (EOFError, KeyboardInterrupt):
+                print("\nExiting...")
+                break
