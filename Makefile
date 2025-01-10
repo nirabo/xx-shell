@@ -9,10 +9,10 @@ help:
 	@echo "  test         Run tests with coverage"
 	@echo "  lint         Run code linting and type checking"
 	@echo "  format       Format code with black and isort"
-	@echo "  docs         Build documentation"
+	@echo "  docs         Build and serve documentation locally"
 	@echo "  docs-build   Build documentation for deployment"
-	@echo "  serve-docs   Serve documentation locally"
 	@echo "  clean        Clean build artifacts and caches"
+	@echo "  venv         Create virtual environment"
 	@echo
 	@echo "Environment:"
 	@echo "  VENV         $(VENV)"
@@ -28,7 +28,7 @@ VENV := .venv
 PYTHONPATH := $(shell pwd)/src
 
 # Targets
-.PHONY: all install test lint format docs clean help
+.PHONY: all install test lint format docs docs-build serve-docs clean help venv
 
 all: help
 
@@ -80,14 +80,3 @@ clean:
 	rm -rf *.egg-info
 	find . -type f -name '*.pyc' -delete
 	find . -type d -name '__pycache__' -delete
-.PHONY: docs
-docs:
-	@echo "Building documentation..."
-	@uv pip install -r requirements-docs.txt
-	@mkdocs build --clean
-	@echo "Documentation built in site/ directory"
-
-.PHONY: serve-docs
-serve-docs:
-	@uv pip install -r requirements-docs.txt
-	@mkdocs serve
