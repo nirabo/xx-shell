@@ -1,6 +1,7 @@
 """Integration tests for MCP functionality."""
 
 import pytest
+from xx_shell.core import Shell
 from xx_shell.plugins import MCPPlugin  # type: ignore[import]
 
 
@@ -16,7 +17,9 @@ class TestMCPIntegration:
         assert "mcp" in shell_instance.available_commands
         assert shell_instance.get_plugin("mcp") == plugin
 
-    def test_mcp_command_execution(self, shell_instance: Shell, mcp_server) -> None:
+    def test_mcp_command_execution(
+        self, shell_instance: Shell, mcp_server
+    ) -> None:
         """Test basic MCP command execution."""
         # TODO: Implement with mock MCP server
         pass

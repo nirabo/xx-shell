@@ -1,6 +1,7 @@
 """Unit tests for core shell functionality."""
 
 import pytest
+from xx_shell.core import Shell
 
 
 @pytest.mark.unit
@@ -28,6 +29,8 @@ class TestShellCore:
         ("help", True),
         ("invalid_command", False)
     ])
-    def test_command_validation(self, shell_instance: Shell, cmd: str, expected: bool) -> None:
+    def test_command_validation(
+        self, shell_instance: Shell, cmd: str, expected: bool
+    ) -> None:
         """Test command validation."""
         assert shell_instance.validate_command(cmd) == expected

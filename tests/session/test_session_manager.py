@@ -1,6 +1,7 @@
 """Unit tests for session management functionality."""
 
 import pytest
+from xx_shell.session import SessionManager
 
 
 @pytest.mark.unit
@@ -13,7 +14,9 @@ class TestSessionManager:
         assert session.id is not None
         assert session_manager.get_session(session.id) == session
 
-    def test_session_persistence(self, session_manager: SessionManager, tmp_path) -> None:
+    def test_session_persistence(
+        self, session_manager: SessionManager, tmp_path
+    ) -> None:
         """Test session save/load functionality."""
         # Create and save session
         session = session_manager.create_session()
