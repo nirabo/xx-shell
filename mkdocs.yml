@@ -33,6 +33,28 @@ markdown_extensions:
   - pymdownx.tasklist
   - toc:
       permalink: true
+  - pymdownx.details
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      type: timeago
+  - redirects:
+      redirect_maps:
+        'old/path.md': 'new/path.md'
+
+extra:
+  analytics:
+    provider: google
+    property: UA-XXXXX-Y
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/nirabo/xx-shell
 
 nav:
   - Home: index.md

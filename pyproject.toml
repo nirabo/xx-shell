@@ -7,7 +7,23 @@ authors = [
     { name = "Lyuboslav Petrov", email = "petrov.lyuboslav@gmail.com" }
 ]
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "mkdocs-material>=9.0",
+    "mkdocs-git-revision-date-localized-plugin>=1.0",
+    "mkdocs-minify-plugin>=0.6",
+    "mkdocs-redirects>=1.0",
+    "mkdocs-section-index>=0.3"
+]
+
+[project.optional-dependencies]
+docs = [
+    "mkdocs>=1.4",
+    "mkdocs-material>=9.0",
+    "mkdocs-git-revision-date-localized-plugin>=1.0",
+    "mkdocs-minify-plugin>=0.6",
+    "mkdocs-redirects>=1.0",
+    "mkdocs-section-index>=0.3"
+]
 
 [project.scripts]
 xx-shell = "xx_shell:main"

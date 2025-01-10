@@ -58,3 +58,14 @@ clean:
 	rm -rf *.egg-info
 	find . -type f -name '*.pyc' -delete
 	find . -type d -name '__pycache__' -delete
+.PHONY: docs
+docs:
+	@echo "Building documentation..."
+	@uv pip install -r requirements-docs.txt
+	@mkdocs build --clean
+	@echo "Documentation built in site/ directory"
+
+.PHONY: serve-docs
+serve-docs:
+	@uv pip install -r requirements-docs.txt
+	@mkdocs serve
