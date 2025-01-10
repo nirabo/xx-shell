@@ -11,7 +11,9 @@ class Shell:
 
     def __init__(self) -> None:
         """Initialize a new shell instance."""
-        self.session = None
+        from xx_shell.session import SessionManager
+        self.session_manager = SessionManager(storage_path="~/.xx/sessions")
+        self.session = self.session_manager.create_session()
         self.available_commands: dict[str, callable] = {}
         self.plugins: dict[str, Plugin] = {}
 
