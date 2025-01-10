@@ -25,7 +25,7 @@ class TestSessionManager:
         """
         # Create and save session
         session = session_manager.create_session()
-        session.add_command("ls -la")
+        session.add_command("ls -la", "dummy output")
         session_manager.save_session(session)
 
         # Load session
