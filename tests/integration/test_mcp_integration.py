@@ -20,6 +20,10 @@ class TestMCPIntegration:
     def test_mcp_command_execution(
         self, shell_instance: Shell, mcp_server: None
     ) -> None:
-        """Test basic MCP command execution."""
+        """Test basic MCP command execution.
+        
+        Verifies that MCP commands can be properly executed through
+        the shell interface.
+        """
         # TODO: Implement with mock MCP server
         pass

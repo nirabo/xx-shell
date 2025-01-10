@@ -7,7 +7,11 @@ from xx_shell.session import SessionManager
 
 @pytest.fixture
 def shell_instance() -> Shell:
-    """Fixture providing a clean shell instance."""
+    """Create and return a clean shell instance for testing.
+    
+    Returns:
+        Shell: A new shell instance with default configuration
+    """
     return Shell()
 
 

@@ -18,7 +18,7 @@ class TestShellCore:
         test_cases = [
             ("ls -la", ["ls", "-la"]),
             ("find . -name '*.py'", ["find", ".", "-name", "*.py"]),
-            ("xx mcp start", ["xx", "mcp", "start"])
+            ("xx mcp start", ["xx", "mcp", "start"]),
         ]
 
         for cmd, expected in test_cases:
