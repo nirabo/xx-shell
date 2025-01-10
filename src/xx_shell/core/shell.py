@@ -14,8 +14,16 @@ class Shell:
         from xx_shell.session import SessionManager
         self.session_manager = SessionManager(storage_path="~/.xx/sessions")
         self.session = self.session_manager.create_session()
-        self.available_commands: dict[str, Callable[..., Any]] = {}
+        self.available_commands: dict[str, Callable[..., Any]] = {
+            "help": self.show_help
+        }
         self.plugins: dict[str, Plugin] = {}
+
+    def show_help(self) -> None:
+        """Show help information."""
+        print("Available commands:")
+        for cmd in sorted(self.available_commands):
+            print(f"  {cmd}")
 
     def parse_command(self, command: str) -> list[str]:
         """Parse a command string into its components.
@@ -26,7 +34,8 @@ class Shell:
         Returns:
             List of command components
         """
-        return command.split()
+        import shlex
+        return shlex.split(command)
 
     def validate_command(self, command: str) -> bool:
         """Validate if a command is supported.
