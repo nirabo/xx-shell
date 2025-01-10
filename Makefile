@@ -1,3 +1,25 @@
+# Help banner
+.PHONY: help
+help:
+	@echo "XX Shell Development Makefile"
+	@echo
+	@echo "Available targets:"
+	@echo "  help         Show this help message"
+	@echo "  install      Install project dependencies"
+	@echo "  test         Run tests with coverage"
+	@echo "  lint         Run code linting and type checking"
+	@echo "  format       Format code with black and isort"
+	@echo "  docs         Build documentation"
+	@echo "  docs-build   Build documentation for deployment"
+	@echo "  serve-docs   Serve documentation locally"
+	@echo "  clean        Clean build artifacts and caches"
+	@echo
+	@echo "Environment:"
+	@echo "  VENV         $(VENV)"
+	@echo "  PYTHONPATH   $(PYTHONPATH)"
+	@echo
+	@echo "Run 'make <target>' to execute a specific command"
+
 # Project Configuration
 PROJECT_NAME := xx_shell
 PYTHON := python3
@@ -6,9 +28,9 @@ VENV := .venv
 PYTHONPATH := $(shell pwd)/src
 
 # Targets
-.PHONY: all install test lint format docs clean
+.PHONY: all install test lint format docs clean help
 
-all: install
+all: help
 
 # Virtual Environment
 $(VENV)/bin/activate:
