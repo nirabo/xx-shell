@@ -42,7 +42,7 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
         shell = Shell()
         shell.show_help()
         print("Type 'exit' to quit")
-        
+
         while True:
             try:
                 command = input("xx> ")
