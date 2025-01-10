@@ -1,4 +1,4 @@
-# XX Shell - The Intelligent Command Shell
+# XX Shell - The Intelligent Command Shell [![codecov](https://codecov.io/gh/nirabo/xx-shell/graph/badge.svg?token=YOUR_TOKEN_HERE)](https://codecov.io/gh/nirabo/xx-shell)
 
 XX Shell is a next-generation command-line interface that combines the power of traditional shells with modern AI capabilities. Built for developers, data scientists, and system administrators, XX Shell provides an intelligent, extensible environment for efficient system interaction and automation.
 
