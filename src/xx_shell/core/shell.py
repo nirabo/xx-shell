@@ -1,6 +1,6 @@
 """Core shell implementation."""
 
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Callable, Any
 
 if TYPE_CHECKING:
     from xx_shell.plugins import Plugin
@@ -14,7 +14,7 @@ class Shell:
         from xx_shell.session import SessionManager
         self.session_manager = SessionManager(storage_path="~/.xx/sessions")
         self.session = self.session_manager.create_session()
-        self.available_commands: dict[str, callable] = {}
+        self.available_commands: dict[str, Callable[..., Any]] = {}
         self.plugins: dict[str, Plugin] = {}
 
     def parse_command(self, command: str) -> list[str]:

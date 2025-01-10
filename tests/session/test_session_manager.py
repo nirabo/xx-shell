@@ -12,8 +12,8 @@ class TestSessionManager:
     def test_session_creation(self, session_manager: SessionManager) -> None:
         """Test creating a new session."""
         session = session_manager.create_session()
-        assert session.id is not None
-        assert session_manager.get_session(session.id) == session
+        assert session.session_id is not None
+        assert session_manager.get_session(session.session_id) == session
 
     def test_session_persistence(
         self, session_manager: SessionManager, tmp_path: str
@@ -29,8 +29,8 @@ class TestSessionManager:
         session_manager.save_session(session)
 
         # Load session
-        loaded = session_manager.load_session(session.id)
-        assert loaded.id == session.id
+        loaded = session_manager.load_session(session.session_id)
+        assert loaded.session_id == session.session_id
         assert loaded.command_history == ["ls -la"]
 
     def test_session_listing(self, session_manager: SessionManager) -> None:
@@ -40,5 +40,5 @@ class TestSessionManager:
 
         sessions = session_manager.list_sessions()
         assert len(sessions) == 2
-        assert session1.id in sessions
-        assert session2.id in sessions
+        assert session1.session_id in sessions
+        assert session2.session_id in sessions

@@ -12,12 +12,12 @@ class Session:
     """Represents a shell session."""
 
     session_id: str
-    command_history: List[str] = None
+    command_history: List[str]
 
     def __post_init__(self) -> None:
         """Initialize session defaults."""
-        if self.command_history is None:
-            self.command_history = []
+        if not hasattr(self, 'command_history'):
+            object.__setattr__(self, 'command_history', [])
 
     def add_command(self, command: str) -> None:
         """Add a command to the session history.
@@ -69,7 +69,7 @@ class SessionManager:
         Args:
             session: The session to save
         """
-        session_file = self.storage_path / f"{session.id}.json"
+        session_file = self.storage_path / f"{session.session_id}.json"
         with open(session_file, "w") as f:
             json.dump({
                 "session_id": session.session_id,
