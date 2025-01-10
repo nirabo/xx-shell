@@ -32,7 +32,7 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
     Args:
         argv: Optional sequence of arguments to pass
     """
-    args = parse_args(argv)
+    parsed_args = parse_args(argv)
     print(f"XX Shell {__version__} - Welcome!")
 
     # Start interactive shell if no specific commands were provided
