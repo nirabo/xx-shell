@@ -34,8 +34,9 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
     """
     args = parse_args(argv)
     print(f"XX Shell {__version__} - Welcome!")
-    
-    if argv is None:  # Only start interactive shell if no args provided
+
+    # Start interactive shell if no specific commands were provided
+    if not argv:
         from xx_shell.core import Shell
         shell = Shell()
         shell.show_help()
