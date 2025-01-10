@@ -10,7 +10,8 @@ import uuid
 @dataclass
 class Session:
     """Represents a shell session."""
-    id: str
+
+    session_id: str
     command_history: List[str] = None
 
     def __post_init__(self) -> None:
@@ -47,7 +48,7 @@ class SessionManager:
             The newly created session
         """
         session_id = str(uuid.uuid4())
-        session = Session(id=session_id)
+        session = Session(session_id=session_id)
         self.sessions[session_id] = session
         return session
 
@@ -71,7 +72,7 @@ class SessionManager:
         session_file = self.storage_path / f"{session.id}.json"
         with open(session_file, "w") as f:
             json.dump({
-                "id": session.id,
+                "session_id": session.session_id,
                 "command_history": session.command_history
             }, f)
 
@@ -91,7 +92,7 @@ class SessionManager:
         with open(session_file, "r") as f:
             data = json.load(f)
             return Session(
-                id=data["id"],
+                session_id=data["session_id"],
                 command_history=data["command_history"]
             )
 
