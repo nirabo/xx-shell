@@ -7,12 +7,12 @@ import pytest
 class TestShellCore:
     """Test cases for core shell functionality."""
 
-    def test_shell_initialization(self, shell_instance):
+    def test_shell_initialization(self, shell_instance: Shell) -> None:
         """Test basic shell initialization."""
         assert shell_instance is not None
         assert shell_instance.session is not None
 
-    def test_command_parsing(self, shell_instance):
+    def test_command_parsing(self, shell_instance: Shell) -> None:
         """Test basic command parsing."""
         test_cases = [
             ("ls -la", ["ls", "-la"]),
@@ -28,6 +28,6 @@ class TestShellCore:
         ("help", True),
         ("invalid_command", False)
     ])
-    def test_command_validation(self, shell_instance, cmd, expected):
+    def test_command_validation(self, shell_instance: Shell, cmd: str, expected: bool) -> None:
         """Test command validation."""
         assert shell_instance.validate_command(cmd) == expected
