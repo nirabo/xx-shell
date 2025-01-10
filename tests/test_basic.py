@@ -1,5 +1,6 @@
 """Basic test cases for XX Shell package."""
 
+import pytest
 from xx_shell.version import __version__
 from xx_shell.main import parse_args
 
@@ -9,7 +10,7 @@ def test_version() -> None:
     assert __version__ is not None
 
 
-def test_argparse_version(capsys) -> None:
+def test_argparse_version(capsys: pytest.CaptureFixture) -> None:
     """Test version argument parsing."""
     try:
         parse_args(["--version"])
@@ -19,7 +20,7 @@ def test_argparse_version(capsys) -> None:
     assert __version__ in captured.out
 
 
-def test_argparse_help(capsys) -> None:
+def test_argparse_help(capsys: pytest.CaptureFixture) -> None:
     """Test help argument parsing."""
     try:
         parse_args(["--help"])
