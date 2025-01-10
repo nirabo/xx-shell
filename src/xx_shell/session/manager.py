@@ -48,7 +48,7 @@ class SessionManager:
             The newly created session
         """
         session_id = str(uuid.uuid4())
-        session = Session(session_id=session_id)
+        session = Session(session_id=session_id, command_history=[])
         self.sessions[session_id] = session
         return session
 

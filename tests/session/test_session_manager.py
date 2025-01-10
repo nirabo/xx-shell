@@ -30,8 +30,10 @@ class TestSessionManager:
 
         # Load session
         loaded = session_manager.load_session(session.session_id)
-        assert loaded.session_id == session.session_id
-        assert loaded.command_history == ["ls -la"]
+        assert loaded is not None
+        if loaded:  # Type guard
+            assert loaded.session_id == session.session_id
+            assert loaded.command_history == ["ls -la"]
 
     def test_session_listing(self, session_manager: SessionManager) -> None:
         """Test listing available sessions."""
