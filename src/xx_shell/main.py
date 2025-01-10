@@ -1,9 +1,9 @@
 """XX Shell main entry point."""
 
 import argparse
-from typing import Sequence, Optional
+from typing import Optional, Sequence
 
-from .version import __version__
+from xx_shell.version import __version__
 
 
 def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:

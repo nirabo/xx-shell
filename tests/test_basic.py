@@ -1,8 +1,9 @@
 """Basic test cases for XX Shell package."""
 
 import pytest
-from xx_shell.version import __version__
+
 from xx_shell.main import parse_args
+from xx_shell.version import __version__
 
 
 def test_version() -> None:
