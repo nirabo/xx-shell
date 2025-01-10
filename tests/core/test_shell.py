@@ -2,7 +2,7 @@
 
 import pytest
 
-from xx_shell.core import Shell
+from xx_shell.core.shell import Shell
 
 
 @pytest.mark.unit
