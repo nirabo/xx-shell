@@ -6,7 +6,7 @@ from xx_shell.session import SessionManager  # type: ignore[import]
 
 
 @pytest.fixture
-def shell_instance():
+def shell_instance() -> Shell:
     """Fixture providing a clean shell instance."""
     return Shell()
 
