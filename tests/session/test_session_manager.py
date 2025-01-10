@@ -18,7 +18,7 @@ class TestSessionManager:
         self, session_manager: SessionManager, tmp_path: str
     ) -> None:
         """Test session save/load functionality.
-        
+
         Verifies that sessions can be properly saved and loaded with
         their command history intact.
         """

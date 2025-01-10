@@ -21,7 +21,7 @@ class TestMCPIntegration:
         self, shell_instance: Shell, mcp_server: None
     ) -> None:
         """Test basic MCP command execution.
-        
+
         Verifies that MCP commands can be properly executed through
         the shell interface.
         """
