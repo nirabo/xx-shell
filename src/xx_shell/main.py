@@ -3,7 +3,7 @@
 import argparse
 from typing import Sequence, Optional
 
-from xx_shell import __version__
+from .version import __version__
 
 
 def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:

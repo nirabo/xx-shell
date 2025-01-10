@@ -1,6 +1,6 @@
 """Basic test cases for XX Shell package."""
 
-from xx_shell import __version__
+from xx_shell.version import __version__
 from xx_shell.main import parse_args
 
 
