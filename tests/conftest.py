@@ -1,6 +1,7 @@
 """Test configuration and fixtures for XX Shell tests."""
 
 import pytest
+
 from xx_shell.core import Shell
 from xx_shell.session import SessionManager
 

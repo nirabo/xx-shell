@@ -1,6 +1,7 @@
 """Unit tests for session management functionality."""
 
 import pytest
+
 from xx_shell.session import SessionManager
 
 

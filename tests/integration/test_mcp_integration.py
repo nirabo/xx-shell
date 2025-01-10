@@ -1,6 +1,7 @@
 """Integration tests for MCP functionality."""
 
 import pytest
+
 from xx_shell.core import Shell
 from xx_shell.plugins import MCPPlugin
 
