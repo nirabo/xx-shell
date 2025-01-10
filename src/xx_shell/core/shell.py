@@ -12,8 +12,8 @@ class Shell:
     def __init__(self) -> None:
         """Initialize a new shell instance."""
         self.session = None
-        self.available_commands = {}
-        self.plugins = {}
+        self.available_commands: dict[str, callable] = {}
+        self.plugins: dict[str, Plugin] = {}
 
     def parse_command(self, command: str) -> list[str]:
         """Parse a command string into its components.
@@ -45,3 +45,17 @@ class Shell:
         """
         self.plugins[plugin.name] = plugin
         self.available_commands.update(plugin.commands)
+
+    def get_plugin(self, name: str) -> "Plugin":
+        """Get a loaded plugin by name.
+
+        Args:
+            name: The name of the plugin to retrieve
+
+        Returns:
+            The plugin instance if found
+
+        Raises:
+            KeyError: If no plugin with the given name exists
+        """
+        return self.plugins[name]
