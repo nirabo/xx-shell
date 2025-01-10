@@ -48,6 +48,32 @@ class Shell:
         """
         return command in self.available_commands
 
+    def execute_command(self, command: str) -> str:
+        """Execute a system command and return its output.
+
+        Args:
+            command: The command to execute
+
+        Returns:
+            The command output as a string
+        """
+        import subprocess
+        try:
+            result = subprocess.run(
+                command,
+                shell=True,
+                check=True,
+                text=True,
+                capture_output=True
+            )
+            output = result.stdout
+            self.session.add_command(command, output)
+            return output
+        except subprocess.CalledProcessError as e:
+            output = e.stderr
+            self.session.add_command(command, output)
+            return output
+
     def load_plugin(self, plugin: "Plugin") -> None:
         """Load a plugin into the shell.
 

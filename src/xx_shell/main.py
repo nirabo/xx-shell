@@ -48,7 +48,8 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
                 command = input("xx> ")
                 if command == "exit":
                     break
-                # TODO: Process command through shell
+                output = shell.execute_command(command)
+                print(output)
             except (EOFError, KeyboardInterrupt):
                 print("\nExiting...")
                 break

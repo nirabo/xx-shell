@@ -12,20 +12,25 @@ class Session:
     """Represents a shell session."""
 
     session_id: str
-    command_history: List[str]
+    command_history: List[dict]
 
     def __post_init__(self) -> None:
         """Initialize session defaults."""
         if not hasattr(self, 'command_history'):
             object.__setattr__(self, 'command_history', [])
 
-    def add_command(self, command: str) -> None:
-        """Add a command to the session history.
+    def add_command(self, command: str, output: str) -> None:
+        """Add a command and its output to the session history.
 
         Args:
-            command: The command to add to history
+            command: The command that was executed
+            output: The command's output
         """
-        self.command_history.append(command)
+        self.command_history.append({
+            "command": command,
+            "output": output,
+            "timestamp": datetime.datetime.now().isoformat()
+        })
 
 
 class SessionManager:
